@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.Hello@1109 }}" | docker login -u "${{ secrets.ashapendyala }}" --password-stdin
+        run: echo "${{ secrets.dockerhub@1109 }}" | docker login -u "${{ secrets.ashapendyala }}" --password-stdin
 
       - name: Build Docker image
         run: docker build -t ${{ secrets.ashapendyala }}/my-flask-app:latest .
